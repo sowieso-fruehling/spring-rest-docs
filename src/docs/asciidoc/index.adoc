@@ -1,0 +1,14 @@
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 4
+:sectlinks:
+:source-highlighter: highlightjs
+:sectanchors:
+
+== Consumer API
+[IMPORTANT]
+User log-ins are dependent on the presence of the *X-Locale header* that determines which database is used for logging-in the user.
+
+include::{snippets}/get-quote/1/http-request.adoc[]
+include::{snippets}/get-quote/1/http-response.adoc[]
