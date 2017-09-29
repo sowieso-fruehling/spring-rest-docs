@@ -15,8 +15,8 @@ import static org.springframework.restdocs.snippet.Attributes.key;
 
 @Configuration
 public class DocumentationConfig {
-    public static final String API_HOST = "api.affinitas.io";
-    public static final String GENERATED_SNIPPETS_DIR = "build/generated-snippets";
+    public static final String API_HOST = "some.host"; //host name that will be shown in generated documentation, before each controller tested method
+    public static final String GENERATED_SNIPPETS_DIR = "build/generated-snippets"; //path to where are generated files. Must be the same as the path used in index.adoc file, because {snippets} from include::{snippets} are that
 
     @Bean
     public RestDocumentationResultHandler restDocumentation() {

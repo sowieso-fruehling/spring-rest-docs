@@ -1,6 +1,5 @@
 package de.be.aff.springrestdocs;
 
-import de.be.aff.springrestdocs.service.QuoteService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +33,19 @@ public class QuoteControllerTests {
         mockMvc.perform(get("/quote"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
+
+        mockMvc.perform(get("/quote"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
+
+    }
+
+    @Test
+    public void thatUrlDoesntExist() throws Exception {
+
+
+        mockMvc.perform(get("/quotes"))
+                .andExpect(status().isNotFound());
 
     }
 }

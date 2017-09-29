@@ -6,9 +6,17 @@
 :source-highlighter: highlightjs
 :sectanchors:
 
-== Consumer API
+== Your documented API
 [IMPORTANT]
-User log-ins are dependent on the presence of the *X-Locale header* that determines which database is used for logging-in the user.
+Some important information you want to share
 
+[get-quote identifies our getQuote method from the test class, not from the controller]
+[number one identifies first mockMvc.perform call in getQuote method]
 include::{snippets}/get-quote/1/http-request.adoc[]
 include::{snippets}/get-quote/1/http-response.adoc[]
+
+include::{snippets}/get-quote/2/http-request.adoc[]
+include::{snippets}/get-quote/2/http-response.adoc[]
+
+include::{snippets}/that-url-doesnt-exist/1/http-request.adoc[]
+include::{snippets}/that-url-doesnt-exist/1/http-response.adoc[]
